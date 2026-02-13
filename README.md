@@ -1,10 +1,20 @@
 ## Lingua Bridge
 
-This app was created using https://getmocha.com.
-Need help or want to join the community? Join our [Discord](https://discord.gg/shDEGBSe2d).
+Breaking Language Barriers, One Word at a Time
 
-To run the devserver:
-```
+Lingua Bridge is a simple yet powerful language translation application designed to help users communicate seamlessly across different languages. With a clean interface and fast translations, Lingua Bridge acts as a bridge between cultures and conversations.
+
+✨ Features
+
+🌍 Translate text between multiple languages
+
+⚡ Fast and accurate translations
+
+🧠 Easy-to-use and intuitive UI
+
+🔄 Real-time language conversion
+
+📱 Responsive design (works on desktop & mobile)
 npm install
 npm run dev
 ```
