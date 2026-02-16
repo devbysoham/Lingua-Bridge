@@ -5,7 +5,7 @@ import reactRefresh from "eslint-plugin-react-refresh";
 import tseslint from "typescript-eslint";
 
 export default tseslint.config(
-  { ignores: [".bun", "node_modules", "dist", "./worker-configuration.d.ts"] },
+  { ignores: ["dist", ".wrangler", "node_modules", ".git", ".github", ".vscode", "import_map.json", "worker-configuration.d.ts", "Lingua-Bridge"] },
   {
     extends: [js.configs.recommended, ...tseslint.configs.recommended],
     files: ["**/*.{ts,tsx}"],
@@ -23,6 +23,7 @@ export default tseslint.config(
         "warn",
         { allowConstantExport: true },
       ],
+      "@typescript-eslint/no-explicit-any": "warn",
     },
   }
 );
