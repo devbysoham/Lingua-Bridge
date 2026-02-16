@@ -75,21 +75,21 @@ Text to translate: ${text}`,
     });
   } catch (error) {
     console.error("Translation error:", error);
-    
+
     if (error instanceof Error) {
       if (error.message.includes("API key")) {
-        return c.json({ 
-          error: "Invalid Gemini API key. Please add your API key in Settings → Secrets" 
+        return c.json({
+          error: "Invalid Gemini API key. Please add your API key in Settings → Secrets"
         }, 500);
       }
       if (error.message.includes("quota") || error.message.includes("rate")) {
-        return c.json({ 
-          error: "API quota exceeded. Please try again in a moment." 
+        return c.json({
+          error: "API quota exceeded. Please try again in a moment."
         }, 429);
       }
       return c.json({ error: `Translation error: ${error.message}` }, 500);
     }
-    
+
     return c.json({ error: "Translation failed. Please try again." }, 500);
   }
 });
